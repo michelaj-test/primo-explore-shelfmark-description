@@ -1,0 +1,18 @@
+{
+  "name": "primo-explore-shelfmark-description",
+  "version": "0.0.1",
+  "description": "primo-explore add description after shelfmark",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelaj-test/primo-explore-shelfmark-description.git"
+  },
+  "keywords": [
+    "primo-explore"
+  ],
+  "author": "mjm2022",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelaj-test/primo-explore-shelfmark-description/issues"
+  },
+  "homepage": "https://github.com/michelaj-test/primo-explore-shelfmark-description#readme"
+}
