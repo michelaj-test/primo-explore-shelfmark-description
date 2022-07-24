@@ -11,7 +11,10 @@ app.controller('LocationAfterController', ['angularLoad', function (angularLoad)
      */ 
     vm.coll = '';
     if ('callNumber' in vm.parentCtrl.loc.location) {
+		var colloc= vm.parentCtrl.loc.location.callNumber
+		if (colloc.match(/NSIAD/)){
 			vm.coll = 'In deposito esterno, richiesta prenotazione.';
+		}
     }
 }]);
 
