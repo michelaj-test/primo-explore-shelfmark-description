@@ -2,22 +2,21 @@
  * Adding description after shelfmark filtered on shelfmark- test
  * mjm2022
  */
-app.controller('AddDescriptionAfterHoldingController', ['angularLoad', function (angularLoad) {
+
+app.controller('LocationAfterController', ['angularLoad', function (angularLoad) {
     var vm = this;
     
     /*
      * Get location shelfmark and filter it
      */ 
-    vm.description = '';
-    if ('callNumber' in vm.parentCtrl.currLoc.location) {
-        if(vm.parentCtrl.currLoc.location.callNumber.match(/ZAR/)) {
-			vm.description = "In deposito esterno, richiesta prenotazione.";
-		}
+    vm.coll = '';
+    if ('callNumber' in vm.parentCtrl.loc.location) {
+			vm.coll = 'In deposito esterno, richiesta prenotazione.';
     }
 }]);
 
-app.component('prmLocationHoldingsAfter', {
+app.component('prmLocationAfter', {
     bindings: {parentCtrl: '<'},
-    controller: 'AddDescriptionAfterHoldingController',
-    template: '<div ng-if="$ctrl.description"><small>{{$ctrl.description}}</small></div>'
-});
+    controller: 'LocationAfterController',
+    template: `<div ng-if="$ctrl.coll"><small>{{$ctrl.coll}}</small></div>`
+	});
